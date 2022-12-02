@@ -7,14 +7,18 @@ def solution():
         lines = f.readlines()
     max_num = 0
     num = 0
+    array_of_stuff = []
     for l in lines:
         if l != '\n':
             num += int(float(l))
         if l == '\n':
+            array_of_stuff.append(num)
             if num > max_num:
                 max_num = num
             num = 0
-    print(max_num)
-
+    array_of_stuff.sort()
+    print(array_of_stuff[len(array_of_stuff)-3:])
+    top_three = sum(array_of_stuff[len(array_of_stuff)-3:])
+    print(top_three)
 
 solution()
