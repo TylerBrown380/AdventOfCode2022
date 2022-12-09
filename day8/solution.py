@@ -67,7 +67,6 @@ def height_score(entry: list) -> int:
         except ValueError:
             score = sum(x)
             scores.append(score)
-    # return scores
     return prod(scores)
 
 def get_max_score(scores):
